@@ -11,16 +11,16 @@ function submitHandler() {
     var qty = Number(stocksQuantity.value);
     var curr = Number(currentPrice.value);
 
-    calculateProfitAndLoss(ip, qty,curr);
+    calculateProfitAndLoss(ip, qty, curr);
 }
 
 function calculateProfitAndLoss(initial, quantity, current) {
-    if(initial > current){
+    if (initial > current) {
         var loss = (initial - current) * quantity;
         var lossPercentage = (loss / initial) * 100;
 
         showOutput(`Hey the loss is ${loss} and the percent is ${lossPercentage}%`);
-    } else if (current > initial){
+    } else if (current > initial) {
         var profit = (current - initial) * quantity;
         var profitPercentage = (profit / initial) * 100;
 
