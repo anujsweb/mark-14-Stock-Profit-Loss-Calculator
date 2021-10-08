@@ -4,7 +4,7 @@ var currentPrice = document.querySelector('#current-price');
 var submitBtn = document.querySelector("#submit-btn");
 var outputBox = document.querySelector('#output-box');
 
-submitBtn = addEventListener('click', submitHandler);
+submitBtn.addEventListener('click', submitHandler);
 
 function submitHandler() {
     var ip = Number(initialPrice.value);
@@ -28,7 +28,7 @@ function calculateProfitAndLoss(initial, quantity, current) {
 
     } else {
         showOutput(`No pain no gain and no gain no pain`);
-        outputBox.innerText = `No pain no gain and no gain no pain`
+        //outputBox.innerText = `No pain no gain and no gain no pain`
     }
 }
 
